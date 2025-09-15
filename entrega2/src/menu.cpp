@@ -1,12 +1,13 @@
-#include <iostream>     // cout, cin
-#include <fstream>      // ifstream
-#include <sstream>      // stringstream
-#include <string>       // std::string
-#include <vector>       // std::vector
+#include <iostream>     
+#include <fstream>      
+#include <sstream>      
+#include <string>       
+#include <vector>       
 #include <map>     
-#include <algorithm>     // std::map
+#include <algorithm>     
 #include "utils.h"
 #include "../common/user_utils.h" 
+#include <unistd.h>
 
 using namespace std;
 
@@ -97,7 +98,7 @@ int main(int argc, char* argv[]) {
         cout << "Uso: ./app2 -u <usuario> -p <password>\n";
         return 1;
     }
-
+    cout << "PID del proceso padre: " << getpid() <<endl;
     string usuario, password;
 
     for (int i = 1; i < argc; i++) {
